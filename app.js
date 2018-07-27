@@ -22,7 +22,7 @@ server.listen(3000, function () {
 
 app.use(router);
 require('./routes/admin/testtxn')(app);
-require('./routes/admin/pgredirect')(app);
+require('./routes/admin/pgredirect')(router);
 require('./routes/admin/response')(app);
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
